@@ -18,4 +18,26 @@ public abstract class RandomNumberFactory {
     public static Integer createInteger(Integer min, Integer max) {
         return createFloat(min, max).intValue();
     }
+    public static Integer createRandomAreaCode(){
+        Integer a = createInteger(1, 9);
+        Integer b = createInteger(1, 9);
+        Integer c = createInteger(1, 9);
+        String abc = a.toString() + b.toString() + c.toString();
+        return Integer.parseInt(abc);
+    }
+    public static Integer createRandomCentralOfficeCode(){
+        Integer a = createInteger(3, 9);
+        Integer b = createInteger(1 ,9);
+        Integer c = createInteger(1 ,9);
+        String abc = a.toString() + b.toString() + c.toString();
+        return Integer.parseInt(abc);
+    }
+    public static Integer createRandomPhoneLineCode(){
+        Integer a = createInteger(1, 9);
+        Integer b = createInteger(1, 9);
+        Integer c = createInteger(1, 9);
+        Integer d = createInteger(1 ,9);
+        String abcd = a.toString() + b.toString() + c.toString() + d.toString();
+        return Integer.parseInt(abcd);
+    }
 }
